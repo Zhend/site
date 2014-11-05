@@ -73,8 +73,8 @@ This is a test.
 Projects:
 
 <ul><li>Halig imperial orchestra</li></ul>
-<ul><li><a href="http://www.secretdecoder.net/blog/2014/05/05/belave-darlet-on-the-brush">Belave - darlet on the brush</a></li></ul>
-<ul><li><a href="http://soundcloud.com/swidden">Soundcloud</a></li></ul>
+<ul><li><a href="http://pitchfork.com/thepitch/479-down-is-up-23-belave-and-major-tendons-compilation/">Belave - darlet on the brush</a></li></ul>
+
 
 @@ css/main.css
 body {

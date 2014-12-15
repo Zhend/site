@@ -154,7 +154,7 @@ main {
     width: 75%;
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 21%;
     overflow-x: hidden;
     overflow-y: hidden;
   }

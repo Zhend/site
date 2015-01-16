@@ -4,8 +4,8 @@ use strict;
 use warnings;
 
 get '/' => sub {
-  my $self = shift;
-  $self->render('home');
+  my $c = shift;
+  $c->render('home');
 };
 
 get '/art' => sub {
@@ -47,13 +47,21 @@ __DATA__
     <ul style="list-style: none;">
       <li><a href="/">Sami Alwani</a></li>
       <li><a href="/art">Art</a></li>
+
       <li><a href="/comics">Comics</a></li>
+<!--
+      <li><a href="#">La Dolce Vita</a></li>
+      <li><a href="#">The Dead Father</a></li>
+--!>
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
+
     </ul>
   </div>
 </aside>
+
+
 
 <main>
 
@@ -66,6 +74,8 @@ __DATA__
 </main>
 </body>
 </html>
+
+
 
 @@ layouts/gallery.html.ep
 <!doctype html>
@@ -86,12 +96,12 @@ __DATA__
     <![endif]-->
   </head>
   <body>
-    <div class="container">
+    
+
+
+<div class="container">
       <div class="four columns">
-        <div class="sidebar">
-          
-      
-        </div>
+ 
       </div>
 
 <aside>
@@ -100,7 +110,14 @@ __DATA__
 <ul style="list-style: none;">
       <li><a href="/">Sami Alwani</a></li>
       <li><a href="/art">Art</a></li>
-      <li><a href="/comics">Comics</a></li>
+
+<li><a href="/comics">Comics</a></li>
+
+<!--    
+      <li><a href="/comics"> La Dolce Vita</a></li>
+      <li><a href="/comics"> The Dead Father</a></li>
+ --!> 
+
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
@@ -109,122 +126,120 @@ __DATA__
 </div>
 </aside>
 
-      <div id="main" role="main" class="twelve columns offset-by-four">
-        <header>
-        </header>
 
+<div id="main" role="main" class="twelve columns offset-by-four">
+        <header></header>
 
+<div id="gallery" class="row">
+<div class="four columns thumbnail alpha">
+	<a href="6876611948_c384400261_o.jpg" class="gallery" 
+		title="6876611948_c384400261_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<img src="thumbnails/6876611948_c384400261_o.jpg" alt="6876611948_c384400261_o.jpg"
+		title="6876611948_c384400261_o.jpg" /></a>
+</div>
 
-        <div id="gallery" class="row">
-            <div class="four columns thumbnail
-alpha">
-              <a href="6876611948_c384400261_o.jpg" class="gallery" title="6876611948_c384400261_o.jpg"                 data-date=", Tuesday, 29. March 2011"
->
-                <img src="thumbnails/6876611948_c384400261_o.jpg" alt="6876611948_c384400261_o.jpg"
-                    title="6876611948_c384400261_o.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-">
-              <a href="6876622310_1f967448ff_o.jpg" class="gallery" title="6876622310_1f967448ff_o.jpg"                 data-date=", Friday, 24. February 2012"
->
-                <img src="thumbnails/6876622310_1f967448ff_o.jpg" alt="6876622310_1f967448ff_o.jpg"
-                    title="6876622310_1f967448ff_o.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-omega">
-              <a href="6876671082_6a1484372b_o.jpg" class="gallery" title="6876671082_6a1484372b_o.jpg"                 data-date=", Tuesday, 29. March 2011"
->
-                <img src="thumbnails/6876671082_6a1484372b_o.jpg" alt="6876671082_6a1484372b_o.jpg"
-                    title="6876671082_6a1484372b_o.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-alpha">
-              <a href="7022713703_ee28921b0a_o.jpg" class="gallery" title="7022713703_ee28921b0a_o.jpg"                 data-date=", Tuesday, 29. March 2011"
->
-                <img src="thumbnails/7022713703_ee28921b0a_o.jpg" alt="7022713703_ee28921b0a_o.jpg"
-                    title="7022713703_ee28921b0a_o.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-">
-              <a href="ART 075 edited.jpg" class="gallery" title="ART 075 edited.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/ART 075 edited.jpg" alt="ART 075 edited.jpg"
-                    title="ART 075 edited.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-omega">
-              <a href="ART 134 edited.jpg" class="gallery" title="ART 134 edited.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/ART 134 edited.jpg" alt="ART 134 edited.jpg"
-                    title="ART 134 edited.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-alpha">
-              <a href="double portrait.jpg" class="gallery" title="double portrait.jpg"                 data-date=", Wednesday, 22. May 2013"
->
-                <img src="thumbnails/double portrait.jpg" alt="double portrait.jpg"
-                    title="double portrait.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-">
-              <a href="erin's seizure.jpg" class="gallery" title="erin's seizure.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/erin's seizure.jpg" alt="erin's seizure.jpg"
-                    title="erin's seizure.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-omega">
-              <a href="everyday detail1.jpg" class="gallery" title="everyday detail1.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/everyday detail1.jpg" alt="everyday detail1.jpg"
-                    title="everyday detail1.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-alpha">
-              <a href="everyday detail2.jpg" class="gallery" title="everyday detail2.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/everyday detail2.jpg" alt="everyday detail2.jpg"
-                    title="everyday detail2.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-">
-              <a href="everyday.jpg" class="gallery" title="everyday.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/everyday.jpg" alt="everyday.jpg"
-                    title="everyday.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-omega">
-              <a href="img 029.JPG" class="gallery" title="img 029.JPG"                 data-date=", Saturday, 30. November 2013"
->
-                <img src="thumbnails/img 029.JPG" alt="img 029.JPG"
-                    title="img 029.JPG" /></a>
-            </div>
-            <div class="four columns thumbnail
-alpha">
-              <a href="puppet portrait.jpg" class="gallery" title="puppet portrait.jpg"                 data-date=", Thursday, 30. January 2014"
->
-                <img src="thumbnails/puppet portrait.jpg" alt="puppet portrait.jpg"
-                    title="puppet portrait.jpg" /></a>
-            </div>
-            <div class="four columns thumbnail
-">
-              <a href="self-portrait.jpg" class="gallery" title="self-portrait.jpg"                 data-date=", Thursday, 22. May 2014"
->
-                <img src="thumbnails/self-portrait.jpg" alt="self-portrait.jpg"
-                    title="self-portrait.jpg" /></a>
-            </div>
-        </div>
+<div class="four columns thumbnail">
+	<a href="6876622310_1f967448ff_o.jpg" class="gallery"         	 
+		title="6876622310_1f967448ff_o.jpg" data-date=", Friday, 24. February 2012">
+        <img src="thumbnails/6876622310_1f967448ff_o.jpg" alt="6876622310_1f967448ff_o.jpg"
+                title="6876622310_1f967448ff_o.jpg" /></a>
+</div>
 
+<div class="four columns thumbnail omega">
+	<a href="6876671082_6a1484372b_o.jpg" class="gallery"                  	title="6876671082_6a1484372b_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<img src="thumbnails/6876671082_6a1484372b_o.jpg" alt="6876671082_6a1484372b_o.jpg"
+	title="6876671082_6a1484372b_o.jpg" /></a>
+</div>
+           
+<div class="four columns thumbnail alpha">
+	<a href="7022713703_ee28921b0a_o.jpg" class="gallery" 
+		title="7022713703_ee28921b0a_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<img src="thumbnails/7022713703_ee28921b0a_o.jpg" alt="7022713703_ee28921b0a_o.jpg"
+		title="7022713703_ee28921b0a_o.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail">
+	<a href="ART 075 edited.jpg" class="gallery" 
+		title="ART 075 edited.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/ART 075 edited.jpg" alt="ART 075 edited.jpg"
+                title="ART 075 edited.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail omega">
+        <a href="ART 134 edited.jpg" class="gallery" 
+		title="ART 134 edited.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/ART 134 edited.jpg" alt="ART 134 edited.jpg"
+                title="ART 134 edited.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail alpha">
+	<a href="double portrait.jpg" class="gallery" 
+		title="double portrait.jpg" data-date=", Wednesday, 22. May 2013">
+        <img src="thumbnails/double portrait.jpg" alt="double portrait.jpg"
+                title="double portrait.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail">
+	<a href="erin's seizure.jpg" class="gallery" 
+		title="erin's seizure.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/erin's seizure.jpg" alt="erin's seizure.jpg"
+                title="erin's seizure.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail omega">
+        <a href="everyday detail1.jpg" class="gallery" 
+		title="everyday detail1.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/everyday detail1.jpg" alt="everyday detail1.jpg"
+                title="everyday detail1.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail alpha">
+        <a href="everyday detail2.jpg" class="gallery" 
+		title="everyday detail2.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/everyday detail2.jpg" alt="everyday detail2.jpg"
+                title="everyday detail2.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail">
+	<a href="everyday.jpg" class="gallery" 
+		title="everyday.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/everyday.jpg" alt="everyday.jpg"
+                title="everyday.jpg" /></a>
+</div>
+            
+<div class="four columns thumbnail omega">
+        <a href="img 029.JPG" class="gallery" 
+		title="img 029.JPG" data-date=", Saturday, 30. November 2013">
+        <img src="thumbnails/img 029.JPG" alt="img 029.JPG"
+                title="img 029.JPG" /></a>
+</div>
+            
+<div class="four columns thumbnail alpha">
+        <a href="puppet portrait.jpg" class="gallery" 
+		title="puppet portrait.jpg" data-date=", Thursday, 30. January 2014">
+        <img src="thumbnails/puppet portrait.jpg" alt="puppet portrait.jpg"
+                title="puppet portrait.jpg" /></a>            
+</div>
+            
+<div class="four columns thumbnail">
+	<a href="self-portrait.jpg" class="gallery" 
+		title="self-portrait.jpg" data-date=", Thursday, 22. May 2014">
+        <img src="thumbnails/self-portrait.jpg" alt="self-portrait.jpg"
+                title="self-portrait.jpg" /></a>
 
       </div>
     </div>
+  </div>
+</div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))</script>
-    <script src="static/js/jquery.colorbox.min.js"></script>
+   %= javascript '//ajax.googleapis.com/ajax/libs/jquery/1.10.2jquery.min.js'
+   %= javascript begin 
+!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))
+   % end
 
-    <script>
+%= javascript '/static/js/jquery.colorbox.min.js'
+%= javascript begin
+    
       $(".gallery").colorbox({
         rel:"gallery",
         transition:"none",
@@ -246,8 +261,10 @@ alpha">
           return this.hasAttribute("inline");
         }
       });
-    </script>
-  </body>
+   
+% end
+  
+</body>
 </html>
 
 @@ home.html.ep
@@ -257,9 +274,11 @@ home
 @@ art.html.ep
 % layout 'gallery';
 
+
 @@ comics.html.ep
 % layout 'default';
-comics
+
+
 
 @@ illustration.html.ep
 % layout 'default';
@@ -268,7 +287,7 @@ illustration
 @@ contact.html.ep
 % layout 'default';
 <h4>ABOUT:</h4>
-<img src="/samavatar.jpg" />
+%= image '/samavatar.jpg'
 My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College ofArt and will be graduating with a degree in Drawing in 2016.
 <h4>CONTACT:</h4>
 alwani.sami@gmail.com
@@ -290,6 +309,14 @@ a {
   color: #000000;
   text-decoration: none;
 }
+
+
+/*
+a:hover:before{
+content: ">";
+}
+*/
+
 hr {
   color: #eeeeee;
   background-color: #eeeeee;
@@ -305,7 +332,7 @@ aside div#menz {
 aside div#menz ul {
   margin: 30px 0 0 0;
   padding-left: 0;
-  font-size: 14px;
+  font-size: 13px;
   list-style-type: none;
 }
 aside div#menz ul li {
@@ -342,7 +369,9 @@ main {
     left: 21%;
     overflow-x: hidden;
     overflow-y: hidden;
-  }
+}
+
+
 
 #content {
 
@@ -354,61 +383,9 @@ main {
 
 @@ css/expand.css
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol,ul {
-    list-style: none;
-}
-
-blockquote,q {
-    quotes: none;
-}
-
-blockquote:before,blockquote:after,q:before,q:after {
-    content: '';
-    content: none;
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-body {
-    background: #fff;
-    font: 16px "Lucida Grande", tahoma, sans-serif;
-    color: #444;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    color: #181818;
-    font-family: "Lucida Grande", tahoma, sans-serif;
-    font-weight: normal;
-}
-
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
-    font-weight: inherit;
-}
-
-.subheader {
-    color: #777;
 }
 
 p {
@@ -438,32 +415,6 @@ small {
     font-size: 80%;
 }
 
-blockquote,blockquote p {
-    font-size: 17px;
-    line-height: 24px;
-    color: #777;
-    font-style: italic;
-}
-
-blockquote {
-    margin: 0 0 20px;
-    padding: 9px 20px 0 19px;
-    border-left: 1px solid #ddd;
-}
-
-blockquote cite {
-    display: block;
-    font-size: 12px;
-    color: #555;
-}
-
-blockquote cite:before {
-    content: "\2014 \0020";
-}
-
-blockquote cite a,blockquote cite a:visited,blockquote cite a:visited {
-    color: #555;
-}
 
 hr {
     border: solid #ddd;
@@ -473,19 +424,10 @@ hr {
     height: 0;
 }
 
-a,a:visited {
-    color: #333;
-    text-decoration: underline;
-    outline: 0;
-}
-
 a:hover,a:focus {
     color: #000;
 }
 
-p a,p a:visited {
-    line-height: inherit;
-}
 
 ul,ol {
     margin-bottom: 20px;
@@ -542,65 +484,6 @@ img.scale-with-grid {
     height: auto;
 }
 
-.button,button,input[type="submit"],input[type="reset"],input[type="button"] {
-    background: #eee;
-    background: #eee -moz-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(0,0,0,.2) 100%);
-    background: #eee -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.2)),color-stop(100%,rgba(0,0,0,.2)));
-    background: #eee -webkit-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(0,0,0,.2) 100%);
-    background: #eee -o-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(0,0,0,.2) 100%);
-    background: #eee -ms-linear-gradient(top,rgba(255,255,255,.2) 0,rgba(0,0,0,.2) 100%);
-    background: #eee linear-gradient(top,rgba(255,255,255,.2) 0,rgba(0,0,0,.2) 100%);
-    border: 1px solid #aaa;
-    border-top: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    color: #444;
-    display: inline-block;
-    font-size: 11px;
-    font-weight: bold;
-    text-decoration: none;
-    text-shadow: 0 1px rgba(255,255,255,.75);
-    cursor: pointer;
-    margin-bottom: 20px;
-    line-height: normal;
-    padding: 8px 10px;
-    font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-.button:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover {
-    color: #222;
-    background: #ddd;
-    background: #ddd -moz-linear-gradient(top,rgba(255,255,255,.3) 0,rgba(0,0,0,.3) 100%);
-    background: #ddd -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.3)),color-stop(100%,rgba(0,0,0,.3)));
-    background: #ddd -webkit-linear-gradient(top,rgba(255,255,255,.3) 0,rgba(0,0,0,.3) 100%);
-    background: #ddd -o-linear-gradient(top,rgba(255,255,255,.3) 0,rgba(0,0,0,.3) 100%);
-    background: #ddd -ms-linear-gradient(top,rgba(255,255,255,.3) 0,rgba(0,0,0,.3) 100%);
-    background: #ddd linear-gradient(top,rgba(255,255,255,.3) 0,rgba(0,0,0,.3) 100%);
-    border: 1px solid #888;
-    border-top: 1px solid #aaa;
-    border-left: 1px solid #aaa;
-}
-
-.button:active,button:active,input[type="submit"]:active,input[type="reset"]:active,input[type="button"]:active {
-    border: 1px solid #666;
-    background: #ccc;
-    background: #ccc -moz-linear-gradient(top,rgba(255,255,255,.35) 0,rgba(10,10,10,.4) 100%);
-    background: #ccc -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,.35)),color-stop(100%,rgba(10,10,10,.4)));
-    background: #ccc -webkit-linear-gradient(top,rgba(255,255,255,.35) 0,rgba(10,10,10,.4) 100%);
-    background: #ccc -o-linear-gradient(top,rgba(255,255,255,.35) 0,rgba(10,10,10,.4) 100%);
-    background: #ccc -ms-linear-gradient(top,rgba(255,255,255,.35) 0,rgba(10,10,10,.4) 100%);
-    background: #ccc linear-gradient(top,rgba(255,255,255,.35) 0,rgba(10,10,10,.4) 100%);
-}
-
-.button.full-width,button.full-width,input[type="submit"].full-width,input[type="reset"].full-width,input[type="button"].full-width {
-    width: 100%;
-    padding-left: 0!important;
-    padding-right: 0!important;
-    text-align: center;
-}
-
 button::-moz-focus-inner,input::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -631,10 +514,6 @@ label,legend {
 
 select {
     width: 220px;
-}
-
-input[type="checkbox"] {
-    display: inline;
 }
 
 label span,legend span {
@@ -923,7 +802,7 @@ label span,legend span {
     }
 
     .container .offset-by-four {
-        padding-left: 192px;
+        padding-left: 85px;
     }
 
     .container .offset-by-five {
@@ -1001,6 +880,13 @@ label span,legend span {
     .container .one.column,.container .one.columns,.container .two.columns,.container .three.columns,.container .four.columns,.container .five.columns,.container .six.columns,.container .seven.columns,.container .eight.columns,.container .nine.columns,.container .ten.columns,.container .eleven.columns,.container .twelve.columns,.container .thirteen.columns,.container .fourteen.columns,.container .fifteen.columns,.container .sixteen.columns,.container .one-third.column,.container .two-thirds.column {
         width: 420px;
     }
+}
+
+
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+.container .offset-by-four {
+padding-left: 120px
+}
 }
 
 .container:after {
@@ -1220,36 +1106,15 @@ label span,legend span {
     background-position: bottom center;
 }
 
-body {
-    font: 100%/1.4 "PT Sans",sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: "PT Sans",sans-serif;
-}
-
 ul {
     list-style: disc outside;
     padding-left: 20px;
 }
 
 .container {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 0px;
 }
 
-header h1 a {
-    text-decoration: none;
-}
-
-.sidebar h1 {
-    font-size: 35px;
-    line-height: 40px;
-    margin: 40px 0;
-}
-
-.sidebar h1 a {
-    text-decoration: none;
-}
 
 .thumbnail {
     text-align: center;
@@ -1285,31 +1150,14 @@ header h1 a {
     header {
         margin-top: 40px;
     }
-
-    .sidebar {
-        position: fixed;
-        height: 100%;
-        width: 220px;
-    }
 }
+
 
 @media only screen and (max-width:767px) {
     .container {
         padding-bottom: 40px;
     }
-
-    .sidebar footer {
-        bottom: 10px;
-    }
 }
-
-@media only screen and (min-width:768px) and (max-width:959px) {
-    .sidebar {
-        width: 172px;
-    }
-}
-
-
 
 
 
@@ -1340,7 +1188,7 @@ aside div#menz {
 aside div#menz ul {
   margin: 30px 0 0 0;
   padding-left: 0;
-  font-size: 14px;
+  font-size: 13px;
   list-style-type: none;
 }
 aside div#menz ul li {
@@ -1371,7 +1219,6 @@ aside div#menz ul li a {
 }
 
 
-
 main {
     width: 75%;
     position: absolute;
@@ -1382,7 +1229,4 @@ main {
   }
 
 #content {
-
-}
-
 }

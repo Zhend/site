@@ -31,14 +31,7 @@ get '/contact' => sub {
 app->start;
 __DATA__
 
-
-
-
-
 @@ layouts/default.html.ep
-
-
-
 
 <!doctype html>
 <html>
@@ -49,9 +42,7 @@ __DATA__
 
 <body>
 
-
 <main>
-
 
 <aside>
   <div id="menz">
@@ -66,8 +57,7 @@ __DATA__
 		    <li class="posts"><a href="comics">The Dead Father</a></li>
 </ul>
 </li>
-</li>
- 
+
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
@@ -93,21 +83,14 @@ $('.comics').click(function() {
 % end
     
 
-
-
 <div id="content">
     <%= content %>
 </div>
 
-
 </main>
-
-
 
 </body>
 </html>
-
-
 
 @@ layouts/gallery.html.ep
 <!doctype html>
@@ -121,7 +104,6 @@ $('.comics').click(function() {
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans">
     <link rel="stylesheet" href="/css/expand.css">
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -149,8 +131,7 @@ $('.comics').click(function() {
 		    <li class="posts"><a href="comics">The Dead Father</a></li>
 </ul>
 </li>
-</li>
- 
+
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>

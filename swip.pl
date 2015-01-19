@@ -28,11 +28,18 @@ get '/contact' => sub {
   $c->render('contact');
 };
 
-
 app->start;
 __DATA__
 
+
+
+
+
 @@ layouts/default.html.ep
+
+
+
+
 <!doctype html>
 <html>
 
@@ -42,17 +49,25 @@ __DATA__
 
 <body>
 
+
+<main>
+
+
 <aside>
   <div id="menz">
     <ul style="list-style: none;">
-      <li><a href="/">Sami Alwani</a></li>
-      <li><a href="/art">Art</a></li>
+	<li><a href="/">Sami Alwani</a></li>
+        <li><a href="/art">Art</a></li>
 
-      <li><a href="/comics">Comics</a></li>
-<!--
-      <li><a href="#">La Dolce Vita</a></li>
-      <li><a href="#">The Dead Father</a></li>
---!>
+    <ul class="expand">
+        <li class="comics"><a>Comics</a>
+		<ul class="content">
+		    <li class="posts"><a href="comics">La Dolce Vita</a></li>
+		    <li class="posts"><a href="comics">The Dead Father</a></li>
+</ul>
+</li>
+</li>
+ 
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
@@ -62,8 +77,22 @@ __DATA__
 </aside>
 
 
+ %= javascript '//ajax.googleapis.com/ajax/libs/jquery/1.10.2jquery.min.js'
+   %= javascript begin 
+!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))
+   % end
 
-<main>
+
+%= javascript begin
+    $('.expand ul').hide();
+
+$('.comics').click(function() {
+    $(this).find('ul').slideToggle();
+});
+
+% end
+    
+
 
 
 <div id="content">
@@ -72,6 +101,9 @@ __DATA__
 
 
 </main>
+
+
+
 </body>
 </html>
 
@@ -106,25 +138,43 @@ __DATA__
 
 <aside>
   <div id="menz">
-  
-<ul style="list-style: none;">
-      <li><a href="/">Sami Alwani</a></li>
-      <li><a href="/art">Art</a></li>
+    <ul style="list-style: none;">
+	<li><a href="/">Sami Alwani</a></li>
+        <li><a href="/art">Art</a></li>
 
-<li><a href="/comics">Comics</a></li>
-
-<!--    
-      <li><a href="/comics"> La Dolce Vita</a></li>
-      <li><a href="/comics"> The Dead Father</a></li>
- --!> 
-
+    <ul class="expand">
+        <li class="comics"><a>Comics</a>
+		<ul class="content">
+		    <li class="posts"><a href="comics">La Dolce Vita</a></li>
+		    <li class="posts"><a href="comics">The Dead Father</a></li>
+</ul>
+</li>
+</li>
+ 
       <li><a href="/illustration">Illustration</a></li>
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
-    </ul>
 
-</div>
+    </ul>
+  </div>
 </aside>
+
+
+ %= javascript '//ajax.googleapis.com/ajax/libs/jquery/1.10.2jquery.min.js'
+   %= javascript begin 
+!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))
+   % end
+
+
+%= javascript begin
+    $('.expand ul').hide();
+
+$('.comics').click(function() {
+    $(this).find('ul').slideToggle();
+});
+
+% end
+    
 
 
 <div id="main" role="main" class="twelve columns offset-by-four">
@@ -232,10 +282,7 @@ __DATA__
   </div>
 </div>
 
-   %= javascript '//ajax.googleapis.com/ajax/libs/jquery/1.10.2jquery.min.js'
-   %= javascript begin 
-!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))
-   % end
+
 
 %= javascript '/static/js/jquery.colorbox.min.js'
 %= javascript begin
@@ -264,12 +311,13 @@ __DATA__
    
 % end
   
+
 </body>
 </html>
 
 @@ home.html.ep
 % layout 'default';
-home
+
 
 @@ art.html.ep
 % layout 'gallery';
@@ -330,7 +378,7 @@ aside div#menz {
 }
 
 aside div#menz ul {
-  margin: 30px 0 0 0;
+ 
   padding-left: 0;
   font-size: 13px;
   list-style-type: none;
@@ -342,6 +390,10 @@ aside div#menz ul li {
 aside div#menz ul li a {
   padding: 5px 15px 5px 15px;
   color: #999999;
+}
+
+.expand {
+cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
@@ -360,6 +412,14 @@ aside div#menz ul li a {
   }
   aside div#menz ul li {
     display: block;
+}
+
+.expand {
+cursor: pointer;
+}
+
+.comics {
+cursor: pointer;
 }
 
 main {
@@ -429,9 +489,7 @@ a:hover,a:focus {
 }
 
 
-ul,ol {
-    margin-bottom: 20px;
-}
+
 
 ul {
     list-style: none outside;
@@ -457,23 +515,8 @@ ul.disc {
     list-style: disc outside;
 }
 
-ul ul,ul ol,ol ol,ol ul {
-    margin: 4px 0 5px 30px;
-    font-size: 90%;
-}
 
-ul ul li,ul ol li,ol ol li,ol ul li {
-    margin-bottom: 6px;
-}
 
-li {
-    line-height: 18px;
-    margin-bottom: 0px;
-}
-
-ul.large li {
-    line-height: 21px;
-}
 
 li p {
     line-height: 21px;
@@ -1186,7 +1229,7 @@ aside div#menz {
 }
 
 aside div#menz ul {
-  margin: 30px 0 0 0;
+
   padding-left: 0;
   font-size: 13px;
   list-style-type: none;
@@ -1199,7 +1242,9 @@ aside div#menz ul li a {
   padding: 5px 15px 5px 15px;
   color: #999999;
 }
-
+.expand {
+cursor: pointer;
+}
 @media screen and (min-width: 1024px) {
   aside {
     width: 18.2%;
@@ -1216,6 +1261,11 @@ aside div#menz ul li a {
   }
   aside div#menz ul li {
     display: block;
+
+}
+
+.expand {
+cursor: pointer;
 }
 
 

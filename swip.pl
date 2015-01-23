@@ -54,7 +54,7 @@ __DATA__
 <aside>
   <div id="menz">
     <ul style="list-style: none;">
-	<li><a href="/">Sami Alwani</a></li>
+	<li><a href="/contact">Sami Alwani</a></li>
         <li><a href="/art">Art</a></li>
 
     <ul class="expand">
@@ -129,7 +129,7 @@ $('.comics').click(function() {
 <aside>
   <div id="menz">
     <ul style="list-style: none;">
-	<li><a href="/">Sami Alwani</a></li>
+	<li><a href="/contact">Sami Alwani</a></li>
         <li><a href="/art">Art</a></li>
 
     <ul class="expand">
@@ -338,12 +338,13 @@ $('.comics').click(function() {
 
 @@ contact.html.ep
 % layout 'default';
-<h4>ABOUT:</h4>
-%= image '/samavatar.jpg'
-My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College ofArt and will be graduating with a degree in Drawing in 2016.
+
+<img src="samavatar.jpg" style="float:left;"/>
+<p style="float:right;">My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College of Art and will be graduating with a degree in Drawing in 2016.</p>
 <h4>CONTACT:</h4>
 alwani.sami@gmail.com
 <h4></h4>
+
 Baltimore, MD, USA
 
 

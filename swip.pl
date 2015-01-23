@@ -13,12 +13,12 @@ get '/art' => sub {
   $c->render('art');
 };
 
-get '/comics/deadfather' => sub {
+get '/deadfather' => sub {
   my $c = shift;
   $c->render('deadfather');
 };
 
-get '/comics/ladolcevita' => sub {
+get '/la-dolce-vita' => sub {
   my $c = shift;
   $c->render('ladolcevita');
 };
@@ -60,8 +60,8 @@ __DATA__
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/comics/ladolcevita">&nbsp&nbsp La Dolce Vita</a></li>
-		    <li class="posts"><a href="/comics/deadfather">&nbsp&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
 </ul>
 </li>
       <li><a href="/illustration">Illustration</a></li>
@@ -135,8 +135,8 @@ $('.comics').click(function() {
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/comics/ladolcevita">&nbsp&nbsp La Dolce Vita</a></li>
-		    <li class="posts"><a href="/comics/deadfather">&nbsp&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
 </ul>
 </li>
       <li><a href="/illustration">Illustration</a></li>
@@ -347,7 +347,9 @@ alwani.sami@gmail.com
 
 Baltimore, MD, USA
 
-
+@@ not_found.html.ep
+% layout 'default';
+404!?
 
 @@ css/main.css
 body {
@@ -436,7 +438,7 @@ cursor: pointer;
 
 main {
     width: 75%;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 21%;
     overflow-x: hidden;
@@ -452,7 +454,9 @@ img {
     height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
+   
 }
+
 
 
 

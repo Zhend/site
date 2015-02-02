@@ -8,11 +8,6 @@ get '/' => sub {
   $c->render('home');
 };
 
-get '/art' => sub {
-  my $c = shift;
-  $c->render('art');
-};
-
 get '/deadfather' => sub {
   my $c = shift;
   $c->render('deadfather');
@@ -48,6 +43,7 @@ __DATA__
 <body>
 
 
+
 <main>
 
 
@@ -55,7 +51,7 @@ __DATA__
   <div id="menz">
     <ul style="list-style: none;">
 	<li><a href="/contact">Sami Alwani</a></li>
-        <li><a href="/art">Art</a></li>
+        <li><a href="/illustration">Illustration</a></li>
 
     <ul class="expand">
         <li class="comics"><a>Comics</a>
@@ -64,7 +60,7 @@ __DATA__
 		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
 </ul>
 </li>
-      <li><a href="/illustration">Illustration</a></li>
+     
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
 
@@ -130,7 +126,7 @@ $('.comics').click(function() {
   <div id="menz">
     <ul style="list-style: none;">
 	<li><a href="/contact">Sami Alwani</a></li>
-        <li><a href="/art">Art</a></li>
+        <li><a href="/illustration">Illustration</a></li>
 
     <ul class="expand">
         <li class="comics"><a>Comics</a>
@@ -139,7 +135,7 @@ $('.comics').click(function() {
 		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
 </ul>
 </li>
-      <li><a href="/illustration">Illustration</a></li>
+     
       <li><a href="/contact">About/Contact</a></li>    
       <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
 
@@ -184,7 +180,7 @@ $('.comics').click(function() {
 </div>
 
 <div class="four columns thumbnail omega">
-	<a href="6876671082_6a1484372b_o.jpg" class="gallery"                  	title="6876671082_6a1484372b_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<a href="6876671082_6a1484372b_o.jpg" class="gallery"                  title="6876671082_6a1484372b_o.jpg" data-date=", Tuesday, 29. March 2011">
 	<img src="thumbnails/6876671082_6a1484372b_o.jpg" alt="6876671082_6a1484372b_o.jpg"
 	title="6876671082_6a1484372b_o.jpg" /></a>
 </div>
@@ -307,12 +303,6 @@ $('.comics').click(function() {
 @@ home.html.ep
 %layout 'default';
 
-
-@@ art.html.ep
-% layout 'gallery';
-
-
-
 @@ deadfather.html.ep
 % layout 'default';
 
@@ -330,19 +320,20 @@ $('.comics').click(function() {
 %= image '/comics/la-dolce-vita/la-dolce-vita-2.jpg'
 %= image '/comics/la-dolce-vita/la-dolce-vita-3.jpg'
 
-@@ illustration.html.ep
-% layout 'default';
-
 %= image '/comics/crazy/remember when you went crazy last year.jpg'
 
+@@ illustration.html.ep
+% layout 'gallery';
 
 @@ contact.html.ep
 % layout 'default';
 
-<img src="samavatar.jpg" style="float:left;"/>
-<p style="float:right;">My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College of Art and will be graduating with a degree in Drawing in 2016.</p>
+<p><img src="samavatar.jpg" align="left" />
+My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College of Art and will be graduating with a degree in Drawing in 2016.</p>
+<hr />
+
 <h4>CONTACT:</h4>
-alwani.sami@gmail.com
+alwani.sami at gmail.com
 <h4></h4>
 
 Baltimore, MD, USA
@@ -358,7 +349,7 @@ body {
   background-color: #ffffff;
   color: #4d4d4d;
   font-family: "Lucida Grande", tahoma, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 a {
   color: #000000;
@@ -405,7 +396,7 @@ cursor: pointer;
 
 @media screen and (min-width: 1024px) {
   aside {
-    width: 18%;
+    width: 180px;
     height: 100%;
     position: fixed;
     top: 0;
@@ -425,6 +416,7 @@ img {
     height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
+
 }
 }
 
@@ -445,6 +437,20 @@ main {
     overflow-y: hidden;
 }
 
+@media screen and (max-width: 1023px) {
+ aside div#menz {
+float: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+
+
+}
 
 
 #content {
@@ -456,7 +462,6 @@ img {
     overflow-y: hidden;
    
 }
-
 
 
 
@@ -942,6 +947,7 @@ label span,legend span {
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 .container .offset-by-four {
 padding-left: 120px
+
 }
 }
 
@@ -1259,7 +1265,7 @@ cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   aside {
-    width: 18.2%;
+    width: 180px;
     height: 100%;
     position: fixed;
     top: 0;

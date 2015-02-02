@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
+use strict;
+use warnings;
 
 plugin 'PODRenderer';
 

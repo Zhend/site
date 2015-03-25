@@ -74,7 +74,6 @@ This is a test.
 <h1>Music</h1>
 Projects:
 
-<ul><li>Halig imperial orchestra</li></ul>
 <ul><li><a href="http://pitchfork.com/thepitch/479-down-is-up-23-belave-and-major-tendons-compilation/">Belave - darlet on the brush</a></li></ul>
 
 

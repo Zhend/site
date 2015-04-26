@@ -335,7 +335,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: "Lucida Grande", tahoma, sans-serif;
+  font-family: GaramondNo8 Regular;
   font-size: 14px;
 }
 a {
@@ -1214,7 +1214,7 @@ body {
   padding: 0;
   background-color: #ffffff;
   color: #4d4d4d;
-  font-family: "Lucida Grande", tahoma, sans-serif;
+  font-family: GaramondNo8 Regular;
   font-size: 16px;
 }
 a {

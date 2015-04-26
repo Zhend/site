@@ -166,98 +166,85 @@ $('.comics').click(function() {
 
 <div id="gallery" class="row">
 <div class="four columns thumbnail alpha">
-	<a href="6876611948_c384400261_o.jpg" class="gallery" 
-		title="6876611948_c384400261_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<a href="6876611948_c384400261_o.jpg" class="gallery">
 	<img src="thumbnails/6876611948_c384400261_o.jpg" alt="6876611948_c384400261_o.jpg"
 		title="6876611948_c384400261_o.jpg" /></a>
 </div>
 
 <div class="four columns thumbnail">
-	<a href="6876622310_1f967448ff_o.jpg" class="gallery"         	 
-		title="6876622310_1f967448ff_o.jpg" data-date=", Friday, 24. February 2012">
+	<a href="6876622310_1f967448ff_o.jpg" class="gallery">
         <img src="thumbnails/6876622310_1f967448ff_o.jpg" alt="6876622310_1f967448ff_o.jpg"
                 title="6876622310_1f967448ff_o.jpg" /></a>
 </div>
 
 <div class="four columns thumbnail omega">
-	<a href="6876671082_6a1484372b_o.jpg" class="gallery"                  title="6876671082_6a1484372b_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<a href="6876671082_6a1484372b_o.jpg" class="gallery">
 	<img src="thumbnails/6876671082_6a1484372b_o.jpg" alt="6876671082_6a1484372b_o.jpg"
 	title="6876671082_6a1484372b_o.jpg" /></a>
 </div>
            
 <div class="four columns thumbnail alpha">
-	<a href="7022713703_ee28921b0a_o.jpg" class="gallery" 
-		title="7022713703_ee28921b0a_o.jpg" data-date=", Tuesday, 29. March 2011">
+	<a href="7022713703_ee28921b0a_o.jpg" class="gallery">
 	<img src="thumbnails/7022713703_ee28921b0a_o.jpg" alt="7022713703_ee28921b0a_o.jpg"
 		title="7022713703_ee28921b0a_o.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="ART 075 edited.jpg" class="gallery" 
-		title="ART 075 edited.jpg" data-date=", Thursday, 22. May 2014">
+	<a href="ART 075 edited.jpg" class="gallery">
         <img src="thumbnails/ART 075 edited.jpg" alt="ART 075 edited.jpg"
                 title="ART 075 edited.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="ART 134 edited.jpg" class="gallery" 
-		title="ART 134 edited.jpg" data-date=", Thursday, 22. May 2014">
+        <a href="ART 134 edited.jpg" class="gallery">
         <img src="thumbnails/ART 134 edited.jpg" alt="ART 134 edited.jpg"
                 title="ART 134 edited.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail alpha">
-	<a href="double portrait.jpg" class="gallery" 
-		title="double portrait.jpg" data-date=", Wednesday, 22. May 2013">
+	<a href="double portrait.jpg" class="gallery">
         <img src="thumbnails/double portrait.jpg" alt="double portrait.jpg"
                 title="double portrait.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="erin's seizure.jpg" class="gallery" 
-		title="erin's seizure.jpg" data-date=", Thursday, 22. May 2014">
+	<a href="erin's seizure.jpg" class="gallery">
         <img src="thumbnails/erin's seizure.jpg" alt="erin's seizure.jpg"
                 title="erin's seizure.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="everyday detail1.jpg" class="gallery" 
-		title="everyday detail1.jpg" data-date=", Thursday, 22. May 2014">
+        <a href="everyday detail1.jpg" class="gallery">
         <img src="thumbnails/everyday detail1.jpg" alt="everyday detail1.jpg"
                 title="everyday detail1.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail alpha">
-        <a href="everyday detail2.jpg" class="gallery" 
-		title="everyday detail2.jpg" data-date=", Thursday, 22. May 2014">
+        <a href="everyday detail2.jpg" class="gallery">
         <img src="thumbnails/everyday detail2.jpg" alt="everyday detail2.jpg"
                 title="everyday detail2.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="everyday.jpg" class="gallery" 
-		title="everyday.jpg" data-date=", Thursday, 22. May 2014">
+	<a href="everyday.jpg" class="gallery">
         <img src="thumbnails/everyday.jpg" alt="everyday.jpg"
                 title="everyday.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="img 029.JPG" class="gallery" 
-		title="img 029.JPG" data-date=", Saturday, 30. November 2013">
+        <a href="img 029.JPG" class="gallery">
         <img src="thumbnails/img 029.JPG" alt="img 029.JPG"
                 title="img 029.JPG" /></a>
 </div>
             
 <div class="four columns thumbnail alpha">
-        <a href="puppet portrait.jpg" class="gallery" 
-		title="puppet portrait.jpg" data-date=", Thursday, 30. January 2014">
+        <a href="puppet portrait.jpg" class="gallery">
         <img src="thumbnails/puppet portrait.jpg" alt="puppet portrait.jpg"
                 title="puppet portrait.jpg" /></a>            
 </div>
             
 <div class="four columns thumbnail">
-	<a href="self-portrait.jpg" class="gallery" 
-		title="self-portrait.jpg" data-date=", Thursday, 22. May 2014">
+	<a href="self-portrait.jpg" class="gallery">
         <img src="thumbnails/self-portrait.jpg" alt="self-portrait.jpg"
                 title="self-portrait.jpg" /></a>
 

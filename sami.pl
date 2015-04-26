@@ -56,8 +56,8 @@ __DATA__
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/la-dolce-vita">&nbsp&nbsp La Dolce Vita</a></li>
-		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/deadfather">&nbsp The Dead Father</a></li>
 </ul>
 </li>
      
@@ -131,8 +131,8 @@ $('.comics').click(function() {
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/la-dolce-vita">&nbsp&nbsp La Dolce Vita</a></li>
-		    <li class="posts"><a href="/deadfather">&nbsp&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/deadfather">&nbsp The Dead Father</a></li>
 </ul>
 </li>
      

@@ -18,6 +18,11 @@ get '/la-dolce-vita' => sub {
   $c->render('ladolcevita');
 };
 
+get '/remember-when' => sub {
+  my $c = shift;
+  $c->render('remember');
+};
+
 get '/illustration' => sub {
   my $c = shift;
   $c->render('illustration');
@@ -50,20 +55,21 @@ __DATA__
 <aside>
   <div id="menz">
     <ul style="list-style: none;">
-	<li><a href="/contact">Sami Alwani</a></li>
-        <li><a href="/illustration">Illustration</a></li>
-
+	<li><a href="/"><plus>Sami Alwani</plus></a></li>
+        
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
 		    <li class="posts"><a href="/deadfather">&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/remember-when">&nbsp Remember </a></li>
 </ul>
 </li>
      
+      <li><a href="/illustration">Illustration</a></li>
+      <li><a href="http://samialwani.blogspot.ca/">*Sketchblog*</a></li>
       <li><a href="/contact">About/Contact</a></li>    
-      <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
-
+     
     </ul>
   </div>
 </aside>
@@ -85,7 +91,9 @@ $('.comics').click(function() {
 % end
     
 
+
 <div id="content">
+    <br></br>
     <%= content %>
 </div>
 
@@ -125,20 +133,21 @@ $('.comics').click(function() {
 <aside>
   <div id="menz">
     <ul style="list-style: none;">
-	<li><a href="/contact">Sami Alwani</a></li>
-        <li><a href="/illustration">Illustration</a></li>
-
+	<li><a href="/"><plus>Sami Alwani</plus></a></li>
+       
     <ul class="expand">
         <li class="comics"><a>Comics</a>
 		<ul class="content">
-		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
 		    <li class="posts"><a href="/deadfather">&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/remember-when">&nbsp Remember</a></li>
 </ul>
 </li>
      
+      <li><a href="/illustration">Illustration</a></li>
+      <li><a href="http://samialwani.blogspot.ca/">*Sketchblog*</a></li>
       <li><a href="/contact">About/Contact</a></li>    
-      <li><a href="http://samialwani.blogspot.ca/">Sketchblog</a></li>
-
+      
     </ul>
   </div>
 </aside>
@@ -166,87 +175,78 @@ $('.comics').click(function() {
 
 <div id="gallery" class="row">
 <div class="four columns thumbnail alpha">
-	<a href="6876611948_c384400261_o.jpg" class="gallery">
-	<img src="thumbnails/6876611948_c384400261_o.jpg" alt="6876611948_c384400261_o.jpg"
-		title="6876611948_c384400261_o.jpg" /></a>
+	<a href="1-everyday.jpg" class="gallery">
+	<img src="thumbnails/everyday.jpg" alt="1-everyday.jpg"
+		title="everyday.jpg" /></a>
 </div>
 
 <div class="four columns thumbnail">
-	<a href="6876622310_1f967448ff_o.jpg" class="gallery">
-        <img src="thumbnails/6876622310_1f967448ff_o.jpg" alt="6876622310_1f967448ff_o.jpg"
-                title="6876622310_1f967448ff_o.jpg" /></a>
+	<a href="2-everyday-detail.jpg" class="gallery">
+        <img src="thumbnails/everyday-detail.jpg" alt="2-everyday-detail.jpg"
+                title="2-everyday-detail.jpg" /></a>
 </div>
 
 <div class="four columns thumbnail omega">
-	<a href="6876671082_6a1484372b_o.jpg" class="gallery">
-	<img src="thumbnails/6876671082_6a1484372b_o.jpg" alt="6876671082_6a1484372b_o.jpg"
-	title="6876671082_6a1484372b_o.jpg" /></a>
+	<a href="3-Everyday-detail.jpg" class="gallery">
+	<img src="thumbnails/everyday-detail1.jpg" alt="3-Everyday-detail.jpg"
+	title="everyday-detail1.jpg" /></a>
 </div>
            
 <div class="four columns thumbnail alpha">
-	<a href="7022713703_ee28921b0a_o.jpg" class="gallery">
-	<img src="thumbnails/7022713703_ee28921b0a_o.jpg" alt="7022713703_ee28921b0a_o.jpg"
-		title="7022713703_ee28921b0a_o.jpg" /></a>
+	<a href="4-arthur.jpg" class="gallery">
+	<img src="thumbnails/arthur.jpg" alt="4-arthur.jpg"
+		title="4-arthur.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="ART 075 edited.jpg" class="gallery">
-        <img src="thumbnails/ART 075 edited.jpg" alt="ART 075 edited.jpg"
-                title="ART 075 edited.jpg" /></a>
+	<a href="5-self-portrait.jpg" class="gallery">
+        <img src="thumbnails/self-portrait.jpg" alt="5-self-portrait.jpg"
+                title="5-self-portrait.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="ART 134 edited.jpg" class="gallery">
-        <img src="thumbnails/ART 134 edited.jpg" alt="ART 134 edited.jpg"
-                title="ART 134 edited.jpg" /></a>
+        <a href="6-erin's-seizure.jpg" class="gallery">
+        <img src="thumbnails/erin's-seizure.jpg" alt="6-erin's-seizure.jpg"
+                title="6-erin's-seizure.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail alpha">
-	<a href="double portrait.jpg" class="gallery">
-        <img src="thumbnails/double portrait.jpg" alt="double portrait.jpg"
-                title="double portrait.jpg" /></a>
+	<a href="7-The-Dead-Father.jpg" class="gallery">
+        <img src="thumbnails/The-Dead-Father.jpg" alt="7-The-Dead-Father.jpg"
+                title="7-The-Dead-Father.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="erin's seizure.jpg" class="gallery">
-        <img src="thumbnails/erin's seizure.jpg" alt="erin's seizure.jpg"
-                title="erin's seizure.jpg" /></a>
+	<a href="8-Facial.jpg" class="gallery">
+        <img src="thumbnails/Facial.jpg" alt="8-Facial.jpg"
+                title="8-Facial.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="everyday detail1.jpg" class="gallery">
-        <img src="thumbnails/everyday detail1.jpg" alt="everyday detail1.jpg"
-                title="everyday detail1.jpg" /></a>
+        <a href="9-double-portrait.jpg" class="gallery">
+        <img src="thumbnails/double-portrait.jpg" alt="9-double-portrait.jpg"
+                title="9-double-portrait.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail alpha">
-        <a href="everyday detail2.jpg" class="gallery">
-        <img src="thumbnails/everyday detail2.jpg" alt="everyday detail2.jpg"
-                title="everyday detail2.jpg" /></a>
+        <a href="10-Room.jpg" class="gallery">
+        <img src="thumbnails/Room.jpg" alt="10-Room.jpg"
+                title="10-Room.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail">
-	<a href="everyday.jpg" class="gallery">
-        <img src="thumbnails/everyday.jpg" alt="everyday.jpg"
-                title="everyday.jpg" /></a>
+	<a href="11-puppet-portrait.jpg" class="gallery">
+        <img src="thumbnails/puppet-portrait.jpg" alt="11-puppet-portrait.jpg"
+                title="11-puppet-portrait.jpg" /></a>
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="img 029.JPG" class="gallery">
-        <img src="thumbnails/img 029.JPG" alt="img 029.JPG"
-                title="img 029.JPG" /></a>
+        <a href="12-img-029.JPG" class="gallery">
+        <img src="thumbnails/img-029.JPG" alt="12-img-029.JPG"
+                title="12-img-029.JPG" /></a>
 </div>
             
-<div class="four columns thumbnail alpha">
-        <a href="puppet portrait.jpg" class="gallery">
-        <img src="thumbnails/puppet portrait.jpg" alt="puppet portrait.jpg"
-                title="puppet portrait.jpg" /></a>            
-</div>
-            
-<div class="four columns thumbnail">
-	<a href="self-portrait.jpg" class="gallery">
-        <img src="thumbnails/self-portrait.jpg" alt="self-portrait.jpg"
-                title="self-portrait.jpg" /></a>
+
 
 
       </div>
@@ -290,6 +290,7 @@ $('.comics').click(function() {
 @@ home.html.ep
 %layout 'default';
 
+
 @@ deadfather.html.ep
 % layout 'default';
 
@@ -307,6 +308,10 @@ $('.comics').click(function() {
 %= image '/comics/la-dolce-vita/la-dolce-vita-2.jpg'
 %= image '/comics/la-dolce-vita/la-dolce-vita-3.jpg'
 
+
+@@ remember.html.ep
+%layout 'default';
+
 %= image '/comics/crazy/remember when you went crazy last year.jpg'
 
 @@ illustration.html.ep
@@ -314,13 +319,21 @@ $('.comics').click(function() {
 
 @@ contact.html.ep
 % layout 'default';
+<plus>ABOUT:</plus>
+<br></br> 
+<div class="wrapper">
 
-<p><img src="samavatar.jpg" align="left" />
-My name is Sami Alwani and I am a cartoonist and illustrator living and working in Baltimore, MD. I am currently studying at the Maryland Institute College of Art and will be graduating with a degree in Drawing in 2016.</p>
-<hr />
+<img src="samavatar.jpg" align="left" />
+<span style="">My name is Sami Alwani and I am a cartoonist
+and illustrator living and working in Baltimore, MD.
+I am currently studying at the Maryland Institute College of Art 
+and will be graduating with a degree in Drawing in 2016.</span>
+</div>
 
-<h4>CONTACT:</h4>
-alwani.sami at gmail.com
+<br></br>
+<plus>CONTACT:</plus>
+<br></br>
+alwani.sami at gmail dot com
 <h4></h4>
 
 Baltimore, MD, USA
@@ -336,11 +349,20 @@ body {
   background-color: #ffffff;
   color: #4d4d4d;
   font-family: GaramondNo8 Regular;
-  font-size: 14px;
+  font-size: 12px;
 }
 a {
   color: #000000;
   text-decoration: none;
+}
+
+plus {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.wrapper { width: 47%;
+    margin: 100;
 }
 
 
@@ -428,6 +450,7 @@ main {
  aside div#menz {
 float: center;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -436,9 +459,7 @@ img {
     
 }
 
-
 }
-
 
 #content {
 } 
@@ -453,6 +474,11 @@ img {
 
 
 @@ css/expand.css
+
+plus {
+    font-style: normal;
+    font-size: 16px;
+}
 
 table {
     border-collapse: collapse;
@@ -1110,6 +1136,7 @@ padding-left: 120px
     color: #fff;
 }
 
+/*
 #cboxPrevious {
     position: absolute;
     top: 50%;
@@ -1120,10 +1147,13 @@ padding-left: 120px
     height: 65px;
     text-indent: -9999px;
 }
+*/
 
 #cboxPrevious:hover {
     background-position: bottom left;
 }
+
+/*
 
 #cboxNext {
     position: absolute;
@@ -1136,9 +1166,13 @@ padding-left: 120px
     text-indent: -9999px;
 }
 
+*/
+
 #cboxNext:hover {
     background-position: bottom right;
 }
+
+/*
 
 #cboxClose {
     position: absolute;
@@ -1150,6 +1184,8 @@ padding-left: 120px
     height: 19px;
     text-indent: -9999px;
 }
+
+*/
 
 #cboxClose:hover {
     background-position: bottom center;

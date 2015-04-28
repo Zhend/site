@@ -241,12 +241,11 @@ $('.comics').click(function() {
 </div>
             
 <div class="four columns thumbnail omega">
-        <a href="12-img-029.JPG" class="gallery">
-        <img src="thumbnails/img-029.JPG" alt="12-img-029.JPG"
-                title="12-img-029.JPG" /></a>
+        <a href="12-face.jpg" class="gallery">
+        <img src="thumbnails/face.jpg" alt="12-face.jpg"
+                title="12-face.jpg" /></a>
 </div>
             
-
 
 
       </div>

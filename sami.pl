@@ -47,10 +47,7 @@ __DATA__
 
 <body>
 
-
-
 <main>
-
 
 <aside>
   <div id="menz">
@@ -91,12 +88,10 @@ $('.comics').click(function() {
 % end
     
 
-
 <div id="content">
     <br></br>
     <%= content %>
 </div>
-
 
 </main>
 
@@ -123,7 +118,6 @@ $('.comics').click(function() {
   </head>
   <body>
     
-
 
 <div class="container">
       <div class="four columns">
@@ -168,7 +162,6 @@ $('.comics').click(function() {
 
 % end
     
-
 
 <div id="main" role="main" class="twelve columns offset-by-four">
         <header></header>
@@ -348,7 +341,8 @@ $('.comics').click(function() {
 
 
 @@ home.html.ep
-%layout 'default';
+% layout 'about';
+%= image '2-everyday-detail.jpg'
 
 
 @@ deadfather.html.ep

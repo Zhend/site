@@ -286,6 +286,67 @@ $('.comics').click(function() {
 </html>
 
 
+@@ layouts/about.html.ep
+
+<!doctype html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="/css/about.css" />
+</head>
+
+<body>
+<main>
+
+<aside>
+  <div id="menz">
+    <ul style="list-style: none;">
+	<li><a href="/"><plus>Sami Alwani</plus></a></li>
+        
+    <ul class="expand">
+        <li class="comics"><a>Comics</a>
+		<ul class="content">
+		    <li class="posts"><a href="/deadfather">&nbsp The Dead Father</a></li>
+		    <li class="posts"><a href="/la-dolce-vita">&nbsp La Dolce Vita</a></li>
+		    <li class="posts"><a href="/remember-when">&nbsp Remember </a></li>
+</ul>
+</li>
+     
+      <li><a href="/illustration">Illustration</a></li>
+      <li><a href="http://samialwani.blogspot.ca/">*Sketchblog*</a></li>
+      <li><a href="/contact">About/Contact</a></li>    
+     
+    </ul>
+  </div>
+</aside>
+
+
+ %= javascript '//ajax.googleapis.com/ajax/libs/jquery/1.10.2jquery.min.js'
+   %= javascript begin 
+!window.jQuery && document.write(unescape('%3Cscript src="static/js/jquery-1.10.2.min.js"%3E%3C/script%3E'))
+   % end
+
+
+%= javascript begin
+    $('.expand ul').hide();
+
+$('.comics').click(function() {
+    $(this).find('ul').slideToggle();
+});
+
+% end
+    
+<div id="content">
+    <br></br>
+    <%= content %>
+</div>
+
+</main>
+
+</body>
+</html>
+
+
 @@ home.html.ep
 %layout 'default';
 
@@ -317,7 +378,7 @@ $('.comics').click(function() {
 % layout 'gallery';
 
 @@ contact.html.ep
-% layout 'default';
+% layout 'about';
 <plus>ABOUT:</plus>
 <br></br> 
 <div class="wrapper">
@@ -340,6 +401,7 @@ Baltimore, MD, USA
 @@ not_found.html.ep
 % layout 'default';
 404!?
+
 
 @@ css/main.css
 body {
@@ -364,6 +426,13 @@ plus {
     margin: 100;
 }
 
+.expand {
+cursor: pointer;
+}
+
+.comics {
+cursor: pointer;
+}
 
 /*
 a:hover:before{
@@ -384,7 +453,6 @@ aside div#menz {
 }
 
 aside div#menz ul {
- 
   padding-left: 0;
   font-size: 13px;
   list-style-type: none;
@@ -398,11 +466,13 @@ aside div#menz ul li a {
   color: #999999;
 }
 
-.expand {
-cursor: pointer;
-}
+
+/*
 
 @media screen and (min-width: 1024px) {
+	
+*/	
+	
   aside {
     width: 180px;
     height: 100%;
@@ -419,35 +489,30 @@ cursor: pointer;
   aside div#menz ul li {
     display: block;
 }
+
 img {
     max-width: 100%;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-}
-}
-
-.expand {
-cursor: pointer;
-}
-
-.comics {
-cursor: pointer;
+    min-width: 758px;
+    min-height: 977px;
 }
 
 main {
     width: 75%;
     position: absolute;
     top: 0;
-    left: 21%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    left: 205px;
 }
+
+#content {
+overflow-x: auto;
+} 
+
+
+/*
 
 @media screen and (max-width: 1023px) {
  aside div#menz {
-float: center;
+
 }
 
 img {
@@ -457,19 +522,9 @@ img {
     overflow-y: hidden;
     
 }
-
 }
 
-#content {
-} 
-img {
-    max-width: 100%;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-   
-}
-
+*/
 
 
 @@ css/expand.css
@@ -1320,3 +1375,128 @@ main {
 
 #content {
 }
+
+
+@@ css/about.css
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #4d4d4d;
+  font-family: GaramondNo8 Regular;
+  font-size: 12px;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+plus {
+    font-style: normal;
+    font-size: 16px;
+}
+
+.wrapper { width: 47%;
+    margin: 100;
+}
+
+.expand {
+cursor: pointer;
+}
+
+.comics {
+cursor: pointer;
+}
+
+/*
+a:hover:before{
+content: ">";
+}
+*/
+
+hr {
+  color: #eeeeee;
+  background-color: #eeeeee;
+  height: 1px;
+  border: none;
+}
+
+aside div#menz {
+  padding: 15px;
+  text-align: center;
+}
+
+aside div#menz ul {
+  padding-left: 0;
+  font-size: 13px;
+  list-style-type: none;
+}
+aside div#menz ul li {
+  display: inline;
+  line-height: 3em;
+}
+aside div#menz ul li a {
+  padding: 5px 15px 5px 15px;
+  color: #999999;
+}
+
+
+/*
+
+@media screen and (min-width: 1024px) {
+	
+*/	
+	
+  aside {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: #eeeeee 2px solid;
+  }
+
+  aside div#menz {
+    max-width: 192px;
+    text-align: left;
+  }
+  aside div#menz ul li {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 205px;
+}
+
+#content {
+
+} 
+
+
+/*
+
+@media screen and (max-width: 1023px) {
+ aside div#menz {
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+}
+
+*/

@@ -2,4 +2,4 @@ sites
 
 dogmap - https://dogmap-zhend.rhcloud.com/
 
-sami - 
+sami - https://sami-zhend.rhcloud.com

@@ -1,5 +1,5 @@
 sites 
 
-sami - https://sami-zhend.rhcloud.com
+sami - https://sami-alwani.rhcloud.com/
 
 dogmap - https://dogmap-zhend.rhcloud.com/
